@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
-public class VD0402_HinhCN {
+public class VD0403_HinhCN {
     // Attributes
     public static boolean trangthai;
+    static int Dai;
+    static int Rong;
 
     // Methods / Actions
-    public static double xacdinhDienTich(int Dai, int Rong) {
+    public static double chobietDienTich() {
         if (Dai >= 0 && Rong >= 0) {
             trangthai = true;
             return (Dai * Rong);
@@ -15,7 +17,7 @@ public class VD0402_HinhCN {
         }        
     }
 
-    public static double xacdinhChuVi(int Dai, int Rong) {
+    public static double chobietChuVi() {
         if (Dai >= 0 && Rong >= 0) {
             trangthai = true;
             return 2*(Dai + Rong);
@@ -27,17 +29,15 @@ public class VD0402_HinhCN {
 
     public static void main(String [] args) {
         Scanner in = new Scanner(System.in);
-
-		int D, R;
 		
 		System.out.print("Nhap chieu Dai (D) , Rong  (R) cua Tam Giac: ");
-        D = in.nextInt();
-        R = in.nextInt();
+        Dai = in.nextInt();
+        Rong = in.nextInt();
 
-        System.out.print("HCN D=" + D 
-            + " R=" + R 
-            + " co Dien Tich=" + xacdinhDienTich(D, R)
-            + " co Chu Vi=" + xacdinhChuVi(D, R) 
+        System.out.print("HCN D=" + Dai 
+            + " R=" + Rong 
+            + " co Dien Tich=" + chobietDienTich()
+            + " co Chu Vi=" + chobietChuVi() 
             + " trang thai co loi ? " + trangthai
             );
     }
