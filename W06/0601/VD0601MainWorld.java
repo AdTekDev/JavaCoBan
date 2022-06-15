@@ -48,15 +48,15 @@ public class VD0601MainWorld {
     }
     // Methods / Actions
 
-    public static void timNguoiLonTuoi(Class_ConNguoi  []) {
+    public static void timNguoiLonTuoi(Class_ConNguoi  []  dsditim) {
 
     } 
 
-    public static void timNuNhoTuoi(Class_ConNguoi  []) {
+    public static void timNuNhoTuoi(Class_ConNguoi  []  dsditim) {
         
     } 
 
-    public static void timNguoiNhieuCon(Class_ConNguoi  []) {
+    public static void timNguoiNhieuCon(Class_ConNguoi  []  dsditim) {
         
     } 
     
