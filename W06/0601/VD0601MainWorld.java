@@ -49,7 +49,17 @@ public class VD0601MainWorld {
     // Methods / Actions
 
     public static void timNguoiLonTuoi(Class_ConNguoi  []  dsditim) {
+        Class_ConNguoi  xMax;
+        int i;
 
+        xMax = dsditim[0];
+        for(i=1; i<dsditim.length; i++) {
+            if ( xMax.Tuoi < dsditim[i].Tuoi) {
+                xMax = dsditim[i];
+            }
+        }
+
+        System.out.print("\n\n Nguoi co TUOI lon nhat " + xMax.GioiThieu() );
     } 
 
     public static void timNuNhoTuoi(Class_ConNguoi  []  dsditim) {
@@ -85,6 +95,9 @@ public class VD0601MainWorld {
             System.out.print("\n\n Thanh vien thu " + i 
             + dsThanhVien[i].GioiThieu() );
         }
+
+        ///// Tim nguoi lon tuoi 
+        timNguoiLonTuoi(dsThanhVien);
 
     }
 }
