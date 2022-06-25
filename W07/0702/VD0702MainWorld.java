@@ -163,6 +163,31 @@ public class VD0702MainWorld {
             System.out.println("\n " + xP.GioiThieu());
     } 
 
+    public static void timNguoivaConVoiCCCD(Class_ConNguoi  []  dsditim, String cccd) {
+        Class_ConNguoi  xP;
+        int i;
+
+        xP = null;
+        i = 0; 
+        while(i < dsditim.length && xP == null) {
+            if (dsditim[i].CCCD.equals(cccd)) {
+                xP = dsditim[i];
+            }
+            i++;
+        }
+
+        if (xP == null)
+            System.out.println("\n Khong co Nguoi co CCCD= " + cccd);
+        else 
+        {
+            System.out.println("\n Nguoi co CCCD tim thay: " + xP.GioiThieu());
+            System.out.println("\n------" + xP.SoCon + " con: ");
+            for(i=0;i<xP.SoCon;i++) {
+                timNguoiVoiCCCD(dsditim, xP.dsCCCDcuaCon[i]);
+            }
+        }
+    } 
+
 
     public static void main(String [] args) {
         Scanner in = new Scanner(System.in);
@@ -205,5 +230,8 @@ public class VD0702MainWorld {
 
         System.out.print("\n\n\n\n\n\n **************** Tim Nguoi co CCCD ::: ");
         timNguoiVoiCCCD(dsThanhVien, "1");
+
+        System.out.print("\n\n\n\n\n\n **************** Tim CON voi Nguoi co CCCD ::: ");
+        timNguoivaConVoiCCCD(dsThanhVien, "1");
     }
 }
