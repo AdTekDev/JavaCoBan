@@ -40,7 +40,7 @@ public class VD0801MainWorld {
         }
         
         for(k=0; k<SoCon; k++) {
-            System.out.print("\tCCCD cua nguoi con " + k);
+            System.out.print("\tCCCD cua nguoi con " + k + " : ");
             dsCCCDcuaCon[k] = in.nextLine();
         }
 
