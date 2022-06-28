@@ -188,8 +188,20 @@ public class VD0801MainWorld {
         }
     } 
 
+    public static String multipleStr(String str, int n) {
+        String x = "";
+        int i;
+        for(i=0;i<n;i++) {
+            x += str;
+        }
+        return x;
+    }
 
-    public static void timConChauVoiNguoiCoCCCD(Class_ConNguoi  []  dsditim, String cccd, int doithu) {
+
+    public static void timConChauVoiNguoiCoCCCD (
+        Class_ConNguoi  []  dsditim, 
+        String cccd, int doithu         ) {
+
         Class_ConNguoi  xP;
         int i;
 
@@ -207,7 +219,7 @@ public class VD0801MainWorld {
         else 
         {
             System.out.println("\n Doi thu " + doithu + " Nguoi co CCCD tim thay: " + xP.GioiThieu());
-            System.out.println("\n------" + xP.SoCon + " con: ");
+            System.out.println("\n" + multipleStr("\t", doithu ) + "------" + xP.SoCon + " con: ");
             for(i=0;i<xP.SoCon;i++) {
                 timConChauVoiNguoiCoCCCD(dsditim, xP.dsCCCDcuaCon[i], doithu+1);
             }
