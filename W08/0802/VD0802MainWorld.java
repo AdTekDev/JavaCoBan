@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
+import java.util.Random;
 
 
 public class VD0802MainWorld {
@@ -13,8 +14,11 @@ public class VD0802MainWorld {
         int soNguoiDoan=-1;
         int soLan = 0;
 
-        System.out.println("\n\n **** TRO CHOI DOAN SO (1..99) trong 5 lan *** ");
-        while (soLan < 5 && soNguoiDoan != soCuaPC) {
+        Random rn = new Random();
+        soCuaPC = rn.nextInt(100) + 1;
+
+        System.out.println("\n\n **** TRO CHOI DOAN SO (1..99) trong 7 lan *** ");
+        while (soLan < 7 && soNguoiDoan != soCuaPC) {
             soLan++;
             System.out.println("\n\n Nhap lan thu " + soLan);
             soNguoiDoan = in.nextInt();
