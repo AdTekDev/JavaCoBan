@@ -5,4 +5,9 @@
 09.02 - Write a program that displays all the numbers from 100 to 200, ten numbers per line, that are divisible by 5 or 6, but not both. Numbers are separated by exactly one space.
 
 09.03 - Write a program that prompts the user to enter the center coordinates and radiuses of two circles and determines whether the second circle is inside the first or overlaps with the first.
+- x1, y1, r1  
+- x2, y2, r2  
+
+d(1,2) = sqrt( (x2-x1)^2 + (y2-y1)^2 )
+
 
